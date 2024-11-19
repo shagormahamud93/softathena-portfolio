@@ -1,4 +1,4 @@
-"use client"
+
 import "./globals.css";
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
