@@ -1,0 +1,96 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.12 Error  css
+/*----------------------------------------*/
+
+// Erorr css style
+
+.error{
+	&__thumb{
+		text-align: center;
+		max-width: 550px;
+  		margin: 0 auto 30px;
+		@media #{$xl,$lg,$md,$sm,$xs}{
+			max-width: 100%;
+		}
+	}
+	&__content{
+		text-align: center;
+		p{
+			padding: 0 70px;
+			@media #{$xl}{
+				padding: 0 60px;
+			}
+			@media #{$xs}{
+				padding: 0;
+			}
+		}
+	}
+	&__btn{
+		margin-top: 25px;
+		text-align: center;
+	}
+	&__shape{
+		&-one{
+			position: absolute;
+			top: 13%;
+			left: 44%;
+			animation:rotate-infinite 10s linear infinite;
+			@media #{$xs}{
+				top: 13%;
+				left: 43%;
+				width: 40px;
+			}
+			@media #{$xxs}{
+				top: 11%;
+				left: 45%;
+				  width: 40px;
+			}
+		}
+		&-two{
+			position: absolute;
+			top: 24%;
+			left: 43%;
+			animation:rotate-infinite 10s linear infinite;
+			@media #{$xs}{
+				top: 24%;
+				left: 41%;
+				width: 40px;
+			}
+			@media #{$xxs}{
+				top: 26%;
+				left: 46%;
+				width: 40px;
+			}
+		}
+		&-three{
+			position: absolute;
+			top: 21%;
+			left: 52%;
+			animation:rotate-infinite 10s linear infinite;
+			@media #{$xs}{
+				top: 19%;
+				left: 51%;
+				width: 40px;
+			}
+			@media #{$xxs}{
+				display: none;
+			}
+		}
+		&-four{
+			position: absolute;
+			top: 30%;
+			left: 51%;
+			animation:rotate-infinite 10s linear infinite;
+			@media #{$xs}{
+				top: 30%;
+				left: 50%;
+				width: 40px;
+			}
+			@media #{$xxs}{
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.6 Copyright Style
+/*----------------------------------------*/
+
+// Footer copyright style
+.footer {
+	&__copyright {
+		p {
+			margin-bottom: 0;
+			a {
+				color: var(--bd-text-primary);
+				&:hover {
+					color: var(--bd-theme-primary);
+				}
+			}
+		}
+		&-inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 27px 0;
+			gap: 10px 30px;
+			@media #{$xs} {
+				flex-wrap: wrap;
+				justify-content: center;
+				text-align: center;
+			}
+		}
+		&.style-two{
+			text-align: center;
+			padding: 22px 0;
+		}
+	}
+}

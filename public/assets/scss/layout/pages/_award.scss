@@ -1,0 +1,101 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 award css
+/*----------------------------------------*/
+
+.award {
+    &__single {
+        &-item {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--bd-border-primary);
+            padding-top: 40px;
+            padding-bottom: 43px;
+            align-items: center;
+
+            @media #{$md} {
+                grid-template-columns: 1.5fr 2fr 1fr;
+            }
+
+            @media #{$sm,$xs} {
+                grid-template-columns: 1fr;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            &:last-child {
+                border-bottom: 1px solid var(--bd-border-primary);
+            }
+
+            &.style-two {
+                display: block;
+                border: 2px solid var(--bd-border-primary);
+                padding: 40px 30px;
+                position: relative;
+                border-radius: 8px;
+                text-align: center;
+                transition: .3s;
+
+                &:hover {
+                    border-color: var(--bd-theme-primary);
+                }
+
+                .award {
+                    &__btn {
+                        text-align: center;
+                    }
+
+                    &__icon {
+                        margin-bottom: 25px;
+
+                        >span {
+                            color: var(--bd-theme-primary);
+                            font-size: 45px;
+                        }
+                    }
+
+                    &__content {
+                        p {
+                            font-size: 16px;
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        @media #{$sm,$xs} {
+            margin-bottom: 13px;
+            display: inline-block;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8px;
+
+        a {
+            &:hover {
+                color: var(--bd-theme-primary);
+            }
+        }
+    }
+
+    &__text {
+        p {
+            @media #{$sm,$xs} {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__btn {
+        text-align: end;
+
+        @media #{$sm,$xs} {
+            text-align: start;
+        }
+    }
+}

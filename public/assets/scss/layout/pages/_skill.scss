@@ -1,0 +1,142 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  7.21 skill css
+/*----------------------------------------*/
+
+.skill {
+    &__item {
+        padding: 53px 10px 75px;
+        background: #2d2f30;
+        text-align: center;
+        border-radius: 180px;
+        max-width: 228px;
+        position: relative;
+        margin: 0 auto;
+        transition: .3s;
+        &::before {
+            position: absolute;
+            width: calc(100% + 15px);
+            height: calc(100% + 15px);
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: -7px;
+            border-radius: 180px;
+            border: 1px solid transparent;
+            border: 1px solid transparent;
+            background: var(--bd-gradient-1) border-box;
+            mask-mode: match-source, match-source;
+            mask-repeat: repeat, repeat;
+            mask-clip: content-box, border-box;
+            mask-origin: content-box, border-box;
+            mask-position: 0% 0%, 0% 0%;
+            mask-size: auto, auto;
+            -webkit-mask: var(--bd-gradient-1) content-box content-box, var(--bd-gradient-1);
+            -webkit-mask-composite: destination-out;
+            mask-image: var(--bd-gradient-1),
+                var(--bd-gradient-1);
+            mask-composite: exclude;
+        }
+        &::after {
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+            border-radius: 180px;
+            bottom: 0;
+            content: "";
+            z-index: 1;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            transition: 0.6s;
+            background: linear-gradient(0deg, #4286F4 -0.87%, rgba(45, 47, 48, 0.00) 86.68%);
+        }
+        &:hover{
+            &::after{
+                visibility: visible;
+                opacity: 1;
+            }
+            background: transparent;
+            .skill__name{
+                color: var(--bd-common-white);
+            }
+        }
+    }
+    &__icon-thumb {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+        width: 96px;
+        height: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        &.pink-bg{
+            background: #FF3366;
+        }
+        &.red-bg{
+            background: #CD1D24;
+        }
+    }
+    &__content{
+        position: relative;
+        z-index: 2;
+        &-wrapper{
+            position: relative;
+            z-index: 2;
+            &.style-two{
+                max-width: 530px;
+            }
+        }
+    }
+    &__name {
+        color:var(--bd-text-light-grey);
+    }
+}
+
+.skill{
+    &__thumb{
+        max-width: 416px;
+        margin: 0 auto;
+        position: relative;
+        @media #{$sm,$xs}{
+            max-width: 100%;
+            margin: 0;
+        }
+        &::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            opacity: 0.6;
+            background: #131313;
+            z-index: 1;
+        }
+        &-wrapper{
+            position: relative;
+            @media #{$md}{
+                position: sticky;
+                top: 100px;
+            }
+            .video__play{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 3;
+            }
+        }
+        img{
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+
+.skill__btn{
+  margin-top: 40px;
+}

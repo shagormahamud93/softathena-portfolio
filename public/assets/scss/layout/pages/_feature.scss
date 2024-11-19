@@ -1,0 +1,70 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  7.25 feature css
+/*----------------------------------------*/
+
+.feature{
+    &__item{
+        border: 1px solid var(--bd-border-primary);
+        padding: 20px 30px;
+        border-radius: 8px;
+        transition: .3s;
+        &:hover{
+            border-color: var(--bd-theme-primary);
+        }
+        span{
+            margin-bottom: 10px;
+            display: inline-block;
+            color: var(--bd-theme-primary);
+        }
+    }
+    &__title{
+        margin-bottom: 10px;
+    }
+    &__list-wrapper{
+        display: grid;
+         grid-template-columns: repeat(4,1fr);
+         @media #{$md,$sm,$xs}{
+            grid-template-columns: repeat(2,1fr);
+         }
+         @media #{$xxs}{
+            grid-template-columns: repeat(1,1fr);
+         }
+         .feature{
+            &__single{
+                &-item{
+                    ul{
+                        li{
+                            list-style: none;
+                            padding-inline-start: 12px;
+                            position: relative;
+                            margin-bottom: 15px;
+                            &::before{
+                                position: absolute;
+                                width: 5px;
+                                height: 5px;
+                                background: var(--bd-theme-primary);
+                                content: "";
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+         }
+    }
+}
+//update
+.bd-feature-area {
+.features-wrapper{
+    .features-item{
+        .features-icon img{
+            object-fit: contain;
+        }
+    }
+}
+}

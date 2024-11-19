@@ -1,0 +1,179 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.43 Widget css
+/*----------------------------------------*/
+
+.cta {
+	&__area{
+		&.is-cta-margin{
+			margin-bottom: -140px;
+		}
+		&.style-tow{
+			.cta{
+				&__bg-thumb{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					z-index: -1;
+					&::before{
+						position: absolute;
+						content: "";
+						width: 100%;
+						height: 100%;
+						background: rgba(0, 0, 0, 0.75);
+						z-index: 1;
+					}
+				}
+				&__content{
+					p{
+						max-width: 500px;
+					}
+				}
+				&__shape{
+					&-six{
+						position: absolute;
+						left: -45px;
+						top: -100px;
+					}
+					&-seven{
+						position: absolute;
+						right: -80px;
+						bottom: -50px;
+					}
+				}
+			}
+		}
+	}
+	&__item{
+		position: relative;
+		border-radius: 8px;
+	}
+	&__bg{
+		&::before{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			content: "";
+			background: rgba(255, 255, 255, 0.08);
+			top: 0;
+			left: 0;
+			z-index: 1;
+			border-radius: 8px;
+			backdrop-filter: blur(50px)
+		}
+		&::after{
+			position: absolute;
+			width: 100%;
+			height: calc(100% - 204px);
+			content: "";
+			background: linear-gradient(90deg, rgba(66, 134, 244, 0.10) 13.04%, rgba(100, 9, 216, 0.10) 97.43%);
+			left: 0;
+			z-index: -1;
+			border-radius: 110px;
+			backdrop-filter: blur(50px)
+		}
+	}
+	&__input{
+		position: relative;
+		input {
+			width: 100%;
+			height: 65px;
+			border-radius: 60px;
+			outline: none;
+			border: 0;
+			font-size: 18px;
+			font-weight: 500;
+			background-color: var(--bd-common-white);
+			color: var(--bd-common-black);
+			padding: 0 28px;
+			padding-right: 190px;
+			@media #{$xxs}{
+				padding-right: 30px;
+			}
+			&::placeholder{
+				color:#111111;
+				opacity: .6;
+				font-size: 18px;
+	
+			}
+		}
+		.cta__btn-pos{
+				position: absolute;
+				inset-inline-end: 5px;
+				top: 0;
+				right: 0;
+				height: 57px;
+				font-weight: 500;
+				font-size: 18px;
+				@media #{$xxs} {
+					position: unset;
+				}
+				.bd-btn{
+					&.is-btn-anim{
+						&::before{
+							@media #{$xxs}{
+								width: 500px;
+								height: 500px;
+							}
+						}
+					}
+				}
+		}
+		a {
+			position: absolute;
+			inset-inline-end: 5px;
+			top: 4px;
+			height: 57px;
+			font-weight: 500;
+			font-size: 18px;
+			@media #{$xxs} {
+				position: unset;
+				margin-top: 10px;
+				width: 100%;
+			}
+		}
+	}
+	&__content{
+		&-wrap{
+			position: relative;
+			z-index: 5;
+		}
+	}
+	&__shape{
+		&-one{
+			position: absolute;
+			z-index: 1;
+			left: 40px;
+			top: 50%;
+		}
+		&-two{
+			position: absolute;
+			z-index: 1;
+			left: 286px;
+			top: 20px;
+		}
+		&-three{
+			position: absolute;
+			z-index: 1;
+			left: 210px;
+			bottom: 20px;
+		}
+		&-four{
+			position: absolute;
+			z-index: 1;
+			right: 60px;
+			top: 40px;
+		}
+		&-five{
+			position: absolute;
+			z-index: 1;
+			right: 200px;
+			bottom: 20px;
+		}
+	}
+}
+
+

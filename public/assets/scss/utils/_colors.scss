@@ -1,0 +1,57 @@
+$colors: (
+  common: (
+    "white": #ffffff,
+    "black": #000000,
+    "placeholder": #7F8387,
+    "selection": #262626,
+  ),
+  body: (
+    "primary": #121314,
+    "secondary": #ffffff,
+  ),
+  theme: (
+    "primary": #4286F4,
+    "secondary": #376EC6,
+  ),
+  text: (
+    "body": #84888C,
+    "primary": #ffffff,
+    "secondary": #BFB8B8,
+    "tertiary": #E2E4E6,
+    "grey": #A69D9C,
+    "lightest": #d1d1d1,
+    "light-grey": #D2D2D2,
+  ),
+  bg: (
+    "primary": #161718,
+    "secondary": #1D1E1F,
+    "tertiary": #434348,
+    "quaternary": #22272C,
+  ),
+  border: (
+    "primary": rgba(255, 255, 255, .1),
+    "secondary": #353535,
+    "tertiary": #232426,
+  ),
+  gradient: (
+    "1": linear-gradient(180deg, rgba(53, 53, 53, 1) 0%,rgba(53, 53, 53, 0) 100%),
+    "2": linear-gradient(90deg, #4286F4 0%, #6409D8 110.71%),
+    "3": linear-gradient(136deg, #4286F4 1.44%, #6409D8 90.3%),
+    "4": linear-gradient(90deg, #4286F4 0%, #630DD9 100%),
+    "5": linear-gradient(99deg, #4286F4 4.72%, #6409D8 93.01%),
+    "6": linear-gradient(45.39deg, rgba(66, 134, 244, 1) 0%, rgba(100, 9, 216, 1) 100%),
+  ),
+  rgba: (
+    "1": rgba(14, 100, 228, 0.10),
+    "2": rgba(66, 134, 244, 0.20),
+    "3": rgba(255, 255, 255, 0.7),
+    "4": rgba(66, 134, 244, 0.8),
+    "5": rgba(66, 134, 244, 0.7),
+  ),
+);
+$white: #fff;
+$black: #000;
+$theme-primary: #089eff;
+$border-secondary: #fb5141;
+$border-tertiary: #674ad9;
+$border-quaternary: #e540a3;

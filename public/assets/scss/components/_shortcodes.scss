@@ -1,0 +1,151 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.12 Shortcodes
+/*----------------------------------------*/
+
+// Text color
+.gradient-text-1 {
+	background: linear-gradient(90deg, #4286F4 0.11%, #6409D8 103.32%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.gradient-text-2 {
+	background: linear-gradient(90deg, #4286F4 1.18%, #6409D8 47.96%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.bd-text-primary {
+	color: var(--bd-theme-primary);
+}
+.text-secondary {
+	color: var(--bd-theme-secondary);
+}
+.text-body {
+	color: var(--bd-text-body);
+}
+.text-white {
+	color: var(--bd-common-white);
+}
+.text-black {
+	color: var(--bd-common-black);
+}
+
+// Rounded Style
+.s-rounded-20 {
+	border-radius: 20px;
+	@media #{$xs, $sm, $md} {
+		border-radius: 0;
+	}
+}
+
+// Small badge
+.badge__card {
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	background: rgb(21, 207, 116);
+	display: inline-block;
+	padding: 5px 8px 3px;
+	border-radius: 50px;
+	color: var(--bd-common-white);
+	line-height: 1;
+	margin-left: 5px;
+}
+
+// Section rounded
+.section-is-rounded {
+	margin: 0 40px;
+	border-radius: 40px;
+	@media #{$xxl} {
+		margin: 0 20px;
+	}
+	@media #{$xs, $sm, $md, $lg} {
+		margin: 0px;
+		border-radius: 0px;
+	}
+}
+.section-rounded-100 {
+	margin: 0 100px;
+	border-radius: 45px;
+	@media #{$xl, $xxl} {
+		margin: 0 30px;
+	}
+	@media #{$xs, $sm, $md, $lg} {
+		margin: 0px;
+		border-radius: 0px;
+	}
+}
+
+// Border radius
+.radius-10 {
+	border-radius: 10px;
+}
+.radius-20 {
+	border-radius: 20px;
+}
+.radius-45 {
+	border-radius: 45px;
+}
+
+// custom-width
+.mw-520 {
+	max-width: 520px;
+	margin: 0 auto;
+}
+.mw-510 {
+	max-width: 510px;
+}
+.max-1520 {
+	max-width: 1520px;
+	@media #{$xxl} {
+		max-width: 1350px;
+	}
+	@media #{$xl} {
+		max-width: 1150px;
+	}
+	@media #{$lg} {
+		max-width: 970px;
+	}
+}
+
+// margin auto
+.margin-auto {
+	margin: 0 auto;
+}
+
+// font weight
+.fw-4 {
+	font-weight: 400;
+}
+.fw-5 {
+	font-weight: 500;
+}
+.fw-6 {
+	font-weight: 600;
+}
+.fw-7 {
+	font-weight: 700;
+}
+.fw-8 {
+	font-weight: 800;
+}
+.fw-9 {
+	font-weight: 900;
+}
+
+// br none
+.is-br-none{
+		@media #{$xxs} {
+		  br {
+			display: none;
+		  }
+		}
+}
+
+.is-border-bottom{
+	border-bottom: 1px solid var(--bd-border-primary);
+}

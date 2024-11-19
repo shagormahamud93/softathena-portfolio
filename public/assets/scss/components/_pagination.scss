@@ -1,0 +1,73 @@
+@use '../utils' as *;
+
+/*----------------------------------------
+   Basic pagination
+-----------------------------------------*/
+.bd-basic {
+	&__pagination {
+		ul {
+			@include flexbox();
+			align-items: center;
+			gap: 12px;
+			flex-wrap: wrap;
+
+			@media #{$xs,$sm,$md} {
+				justify-content: flex-start;
+			}
+
+			li {
+				list-style: none;
+
+				a {
+					width: 50px;
+					height: 50px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					position: relative;
+					right: 0;
+					top: 50%;
+					font-weight: 600;
+					font-size: 18px;
+					border: 1px solid var(--bd-border-primary);
+					@include border-radius(50%);
+
+					&:hover {
+						background-color: var(--bd-theme-primary);
+						color: var(--bd-common-white);
+						border-color: transparent;
+					}
+				}
+
+				.current {
+					width: 50px;
+					height: 50px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					position: relative;
+					right: 0;
+					top: 50%;
+					font-weight: 500;
+					font-size: 16px;
+					background-color: var(--bd-theme-primary);
+					color: var(--bd-common-white);
+					@include border-radius(50%);
+				}
+			}
+		}
+
+		&.style-2 {
+			ul {
+				li {
+					span {
+						a {
+							border: 0;
+							background: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}

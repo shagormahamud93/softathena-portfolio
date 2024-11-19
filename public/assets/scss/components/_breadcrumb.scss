@@ -1,0 +1,156 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 Breadcrumb
+/*----------------------------------------*/
+
+// Breadcrumb style
+.breadcrumb{
+  &__shape{
+    &-one{
+      position: absolute;
+      left: 135px;
+      -moz-animation: rotate-infinite 3s ease-in-out 1s forwards infinite alternate;
+      -webkit-animation: rotate-infinite 3s ease-in-out 1s forwards infinite alternate;
+      animation: rotate-infinite 3s ease-in-out 1s forwards infinite alternate;
+      bottom: 60px;
+      @media #{$md}{
+        left: 75px;
+      }
+      @media #{$sm,$xs}{
+        display: none;
+      }
+    }
+    &-two{
+      position: absolute;
+      right: 115px;
+      top: 60px;
+      -moz-animation: rotate-infinite 3s ease-in-out 1s forwards infinite alternate;
+      -webkit-animation: rotate-infinite 3s ease-in-out 1s forwards infinite alternate;
+      animation: rotate-infinite 3s ease-in-out 1s forwards infinite alternate;
+      @media #{$md}{
+        right: 75px;
+      }
+      @media #{$sm,$xs}{
+        display: none;
+      }
+    }
+  }
+  &__menu{
+    ul {
+      @include inline-flex();
+      gap: 20px 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        list-style: none;
+        position: relative;
+        line-height: 1;
+        &:last-child {
+          span {
+            color: var(--bd-theme-primary);
+          }
+        }
+        &:not(:last-child) {
+          &::before {
+            display: inline-block;
+            content: "\f105";
+            position: absolute;
+            top: 50%;
+            font-family: var(--bd-ff-fontawesome);
+            @extend %translateY1_2;
+            inset-inline-end: -16px;
+            font-size: 16px;
+            color: var(--bd-common-white);
+          }
+        }
+        &.active {
+          span {
+            color: var(--bd-theme-primary);
+          }
+        }
+        span {
+          font-size: 16px;
+          font-weight: var(--bd-fw-medium);
+          text-transform: uppercase;
+          color: var(--bd-common-white);
+          a {
+            font-weight: var(--bd-fw-medium);
+            &:hover {
+              color: var(--bd-theme-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__area{
+    &.style-two{
+      &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      &.is-breadcrumb-space{
+        padding-top: 220px;
+        padding-bottom: 130px;
+        @media #{$md,$sm}{
+          padding-top: 170px;
+          padding-bottom: 90px;
+        }
+        @media #{$xs}{
+          padding-top: 150px;
+          padding-bottom: 80px;
+        }
+      }
+      .breadcrumb{
+        &__menu{
+          ul{
+            li{
+              &::before{
+                color: var(--bd-common-white);
+              }
+              span{
+                a{
+                  color: var(--bd-common-white);
+                  &:hover{
+                    color: var(--bd-theme-primary);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.style-one{
+      padding-top: 130px;
+      padding-bottom: 130px;
+      @media #{$md}{
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      @media #{$sm}{
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+      @media #{$xs}{
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+      &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}

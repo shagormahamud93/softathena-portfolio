@@ -1,0 +1,53 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.43 Job css
+/*----------------------------------------*/
+
+.job{
+    &__item{
+        &-wrapper{
+            border: 1px solid var(--bd-border-primary);
+            padding: 30px 30px 30px 30px;
+            border-radius: 8px;
+            transition: .4s;
+            &:hover{
+                border-color: var(--bd-theme-primary);
+            }
+        }
+    }
+    &__title{
+        margin-bottom: 20px;
+        a{
+            &:hover{
+                color: var(--bd-theme-primary);
+            }
+        }
+    }
+    &__meta{
+        &-wrapper{
+            margin-bottom: 25px;
+        }
+        &-item{
+            &:first-child{
+                margin-bottom: 10px;
+            }
+            span{
+                font-size: 16px;
+                i{
+                    color: var(--bd-theme-primary);
+                    margin-right: 5px;
+
+                }
+            }
+        }
+    }
+    &__vacancies{
+        margin-bottom: 20px;
+        span{
+            margin-bottom: 5px;
+            display: inline-block;
+            line-height: 1;
+        }
+    }
+}

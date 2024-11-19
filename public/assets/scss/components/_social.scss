@@ -1,0 +1,191 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 Breadcrumb
+/*----------------------------------------*/
+.theme {
+    &__social {
+        @include flexbox();
+        gap: 10px;
+        a {
+            color: var(--bd-theme-primary);
+            @include flexbox();
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            background: rgba(66, 134, 244, .1);
+            font-size: 16px;
+            @include border-radius(50%);
+            &:hover{
+                color: var(--bd-common-white);
+                background: var(--bd-theme-primary);
+            }
+        }
+        &.banner-social {
+            @media #{$xs}{
+                display: none;
+            }
+            a {
+                position: absolute;
+                font-size: 20px;
+                background: linear-gradient(180deg, rgba(30, 32, 34, 1) 0%, rgba(47, 60, 72, 1) 100%);
+                border-radius: 70px;
+                box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2), 0px -10px 10px 0px rgba(37, 37, 37, 0.4);
+                width: 50px;
+                height: 50px;
+                color: var(--bd-common-white);
+                &:nth-child(1) {
+                    right: -12px;
+                    top: 40%;
+                    @media #{$xl}{
+                        right: -12px;
+                        top: 37%;
+                    }
+                    @media #{$lg}{
+                        top: 39%;
+                    }
+                    @media #{$md}{
+                        bottom: 300px;
+                        top: unset;
+                    }
+                }
+                &:nth-child(2) {
+                    right: -25px;
+                    top: 50%;
+                    @media #{$xl}{
+                        right: -20px;
+                        top: 48%;
+                    }
+                    @media #{$md}{
+                        right: -20px;
+                        bottom: 238px;
+                        top: unset;
+                    }
+                    // .banner__social-tooltip {
+                    //     right: -80px;
+                    // }
+                }
+                &:nth-child(3) {
+                    right: -20px;
+                    top: 60%;
+                    @media #{$lg}{
+                        top: 62%;
+                    }
+                    @media #{$md}{
+                        bottom: 175px;
+                        top: unset;
+                        right: 0;
+                    }
+                    // .banner__social-tooltip {
+                    //     right: -80px;
+                    // }
+                }
+                &:nth-child(4) {
+                    right: 0px;
+                    top: 70%;
+                    @media #{$xl}{
+                        top: 71%;
+                    }
+                    @media #{$lg}{
+                        top: 73%;
+                    }
+                    @media #{$md}{
+                        bottom: 120px;
+                        top: unset;
+                        right: 35px;
+                    }
+                }
+                .banner__social-tooltip {
+                    @media #{$lg,$md,$sm}{
+                        display: none;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        width: 13px;
+                        height: 13px;
+                        background-color: var(--bd-common-white);
+                        transform: rotate(45deg) translateY(50%);
+                        top: 3px;
+                        z-index: -1;
+                    }
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    background-color: white;
+                    padding: 6px 11px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 0.3s ease-out 0s;
+                    transform: translateY(-50%);
+                    p {
+                        font-size: 14px;
+                        color: #161718;
+                        line-height: 1;
+                    }
+                }
+                &:hover {
+                    .banner__social-tooltip {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateX(16px) translateY(-50%);
+                    }
+                    background: var(--bd-theme-primary);
+                    color: var(--bd-common-white);
+                }
+            }
+            &.style-two{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 3;
+                @media #{$xl,$lg}{
+                    display: none;
+                }
+                @media #{$xxs}{
+                    transform: translateY(0);
+                }
+                a{
+                    background: var(--bd-bg-secondary);
+                    position: unset;
+                    border-radius: 0;
+                    box-shadow: none;
+                    &:hover{
+                        background: var(--bd-theme-primary);
+                    }
+                }
+            }
+            &.style-three{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 3;
+                background: rgba(88, 91, 95, 0.28);
+                border-radius: 8px;
+                gap: 0;
+                a{
+                    position: unset;
+                    background: transparent;
+                    box-shadow: none;
+                    color: var(--bd-theme-primary);
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 8px;
+                    &:hover{
+                        background: var(--bd-theme-primary);
+                        color: var(--bd-common-white);
+                    }
+
+                }
+            }
+        }
+    }
+}

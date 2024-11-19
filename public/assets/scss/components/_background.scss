@@ -1,0 +1,89 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.4 Background
+/*----------------------------------------*/
+
+.white-bg {
+  background-color: var(--bd-common-white);
+}
+.black-bg {
+  background-color: var(--bd-common-black);
+}
+.footer-bg {
+  background-color: var(--bd-bg-1);
+  @include light {
+    background-color: var(--bd-bg-2);
+  }
+}
+
+// Theme bg
+.theme-bg-primary {
+  background-color: var(--bd-bg-primary);
+}
+.theme-bg-secondary {
+  background-color: var(--bd-bg-secondary);
+}
+.theme-bg-quaternary {
+  background-color: var(--bd-bg-quaternary);
+}
+.theme-bg-4 {
+  background-color: var(--bd-bg-4);
+}
+.theme-bg-5 {
+  background-color: var(--bd-bg-5);
+}
+.theme-bg-6 {
+  background-color: var(--bd-bg-6);
+}
+.theme-bg-7 {
+  background-color: var(--bd-bg-7);
+}
+.theme-bg-8 {
+  background-color: var(--bd-bg-8);
+}
+.theme-bg-9 {
+  background-color: var(--bd-bg-9);
+}
+.theme-bg-10 {
+  background-color: var(--bd-bg-10);
+}
+
+// Gradient color
+.gradient-bg-1 {
+	background: linear-gradient(136deg, #4286F4 1.44%, #6409D8 90.3%);
+}
+.gradient-bg-2 {
+  background: linear-gradient(90deg, #4286F4 0%, #6409D8 110.71%);
+}
+.gradient-bg-3 {
+  background: linear-gradient(45.39deg, rgba(66, 134, 244, 1) 0%, rgba(100, 9, 216, 1) 100%);
+}
+
+// Background color
+.lightest-bg {
+  background: var(--bd-theme-lightest);
+}
+.lighte-bg {
+  background: var(--bd-theme-lighte);
+}
+.lighte-bg {
+  background: var(--bd-theme-lighte);
+}
+.medium-bg {
+  background: var(--bd-theme-medium);
+}
+.dark-bg {
+  background: var(--bd-theme-dark);
+}
+
+// primary color
+.color-primary{
+  color: var(--bd-theme-primary);
+}
+
+
+// theme opacity
+.bg-primary-opacity{
+  background: var(--bd-rgba-2);
+}

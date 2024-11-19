@@ -1,0 +1,227 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  7.28 Price css
+/*----------------------------------------*/
+
+.pricing {
+    &__item {
+        border: 2px solid var(--bd-border-secondary);
+        padding: 35px 30px 40px;
+        border-radius: 10px;
+        transition: .3s;
+        &:hover{
+            border-color: var(--bd-theme-primary);
+        }
+        @media #{$md,$xs}{
+            padding: 35px 20px 40px;
+        }
+        &.active {
+            border-color: var(--bd-theme-primary);
+        }
+        &.style-two {
+            text-align: center;
+            background: var(--bd-bg-secondary);
+            border: none;
+            &:hover{
+                background: var(--bd-theme-primary);
+                .bd-btn.bordered-light{
+                    border: 1px solid transparent;
+                }
+                .bd-btn{
+                    background: var(--bd-common-white);
+                     color: var(--bd-theme-primary);
+                     &:hover{
+                        color: var(--bd-common-black);
+                    }
+                }
+            }
+            .pricing__feature {
+                display: flex;
+                justify-content: center;
+            }
+            &.active {
+                background: var(--bd-theme-primary);
+                .bd-btn {
+                    background: var(--bd-common-white);
+                    color: var(--bd-common-black);
+                    &:hover {
+                        background: var(--bd-common-black);
+                        color: var(--bd-common-white);
+                    }
+                }
+            }
+            .pricing__content {
+                p {
+                    color: var(--bd-common-white);
+                }
+            }
+            .pricing__list {
+                li {
+                    p {
+                        color: var(--bd-common-white);
+                    }
+                    i {
+                        background: var(--bd-common-white);
+                        color: var(--bd-common-black);
+                    }
+                }
+            }
+        }
+        &.style-three{
+            transition: .5s;
+            border: none;
+            background: var(--bd-bg-secondary);
+            .pricing{
+                &__content{
+                    border-bottom: 1px solid var(--bd-border-primary);
+                }
+                &__feature{
+                    margin-bottom: 35px;
+                }
+            }
+            &.active{
+                &:hover{
+                    background: var(--bd-theme-primary);
+                    border: none;
+                }
+                
+                background: var(--bd-theme-primary);
+                border: none;
+                .bd-btn{
+                    background: var(--bd-common-white);
+                    color: var(--bd-theme-primary);
+                    &:hover{
+                        color: var(--bd-common-black);
+                    }
+                }
+                .pricing{
+                    &__content{
+                        border-color: rgba(255,255,255, .4);
+                    }
+                    &__amount{
+                        span{
+                            color: var(--bd-common-white);
+                        }
+                    }
+                    &__description{
+                        color: var(--bd-common-white);
+                    }
+                    &__list{
+                        i{
+                            background: var(--bd-common-white);
+                            color: var(--bd-theme-primary);
+                        }
+                        P{
+                            color: var(--bd-common-white);
+                        }
+                    }
+                }
+            }
+            &:hover{
+                background: var(--bd-theme-primary);
+                .pricing{
+                    &__content{
+                        border-color: rgba(255,255,255, .4);
+                    }
+                    &__amount{
+                        span{
+                            color: var(--bd-common-white);
+                        }
+                    }
+                    &__description{
+                        color: var(--bd-common-white);
+                    }
+                    &__list{
+                        i{
+                            background: var(--bd-common-white);
+                            color: var(--bd-theme-primary);
+                        }
+                        P{
+                            color: var(--bd-common-white);
+                        }
+                    }
+                }
+                .bd-btn{
+                    background: var(--bd-common-white);
+                    color: var(--bd-theme-primary);
+                    &.bordered-light{
+                        border: 1px solid transparent;
+                    }
+                    &:hover{
+                        color: var(--bd-common-black);
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        transition: .3s;
+        .pricing__title {
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 22px;
+        }
+        .pricing__amount {
+            margin-bottom: 23px;
+            line-height: 1.1;
+            .dollar-sign {
+                font-size: 24px;
+                transform: translateY(-15px) translateX(5px);
+                display: inline-block;
+                font-weight: 400;
+                @media #{$md}{
+                    font-size: 20px;
+                }
+                @media #{$sm,$xs}{
+                    font-size: 18px;
+                }
+            }
+            .duration {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.50);
+                transform: translateX(-7px);
+                display: inline-block;
+                font-weight: 400;
+            }
+        }
+    }
+    &__btn{
+        .bd-btn{
+            height: 60px;
+        }
+    }
+    &__feature {
+        margin-top: 27px;
+        .pricing__list {
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 0 13px;
+
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+                i {
+                    color: var(--bd-common-white);
+                    background: var(--bd-theme-primary);
+                    width: 22px;
+                    height: 22px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    font-weight: 600;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}
+
+// switch
+
+

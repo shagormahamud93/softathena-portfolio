@@ -1,0 +1,100 @@
+@use "../../utils" as *;
+
+// progress style 
+
+.bd {
+    &__progress {
+        &-bar {
+            overflow: hidden;
+            & .progress {
+                height: 10px;
+                overflow: visible;
+                & .progress-bar {
+                    background-color: var(--bd-theme-primary);
+                    border-radius: 10px;
+                    position: relative;
+                    overflow: visible !important;
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        width: 24px;
+                        height: 24px;
+                        right: 0;
+                        background-color: var(--bd-theme-primary);
+                        border: 2px solid var(--bd-common-white);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            @media #{$md, $sm, $xs} {
+                padding-left: 0 !important;
+            }
+            &.style-two {
+               & .progress {
+                    height: 4px;
+                   & .progress-bar {
+                        background-color: var(--bd-theme-primary);
+                        border-radius: 0;
+                        position: relative;
+                        overflow: visible !important;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+                .bd__progress{
+                    &-percentage{
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    &-head{
+                        margin-bottom: 7px;
+                    }
+                    &-wrapper{
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+            &.style-three {
+               & .progress {
+                    height: 6px;
+                   & .progress-bar {
+                        background-color: var(--bd-theme-primary);
+                        border-radius: 4px;
+                        position: relative;
+                        overflow: visible !important;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+                .bd__progress{
+                    &-percentage{
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    &-head{
+                        margin-bottom: 7px;
+                    }
+                    &-wrapper{
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+        &-wrapper {
+            margin-bottom: 20px;
+        }
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        &-percentage {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--bd-text-body);
+        }
+    }
+}
+
